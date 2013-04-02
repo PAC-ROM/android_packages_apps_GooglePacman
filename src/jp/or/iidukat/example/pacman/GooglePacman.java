@@ -39,8 +39,6 @@ public class GooglePacman extends Activity implements OnClickListener {
         
         View newGameButton = findViewById(R.id.new_game_button);
         newGameButton.setOnClickListener(this);
-        View killScreenButton = findViewById(R.id.killscreen_button);
-        killScreenButton.setOnClickListener(this);
         View exitButton = findViewById(R.id.exit_button);
         exitButton.setOnClickListener(this);
     }
@@ -68,10 +66,6 @@ public class GooglePacman extends Activity implements OnClickListener {
         case R.id.new_game_button:
             transitionToGameView();
             game.startNewGame();
-            break;
-        case R.id.killscreen_button:
-            transitionToGameView();
-            game.showKillScreen();
             break;
         case R.id.exit_button:
             finish();
